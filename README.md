@@ -113,7 +113,7 @@ Feel free to submit issues and enhancement requests!
 
 ## Author
 
-[Your Name/Team]
+[Mohamed Osama]
 
 ## Acknowledgments
 
