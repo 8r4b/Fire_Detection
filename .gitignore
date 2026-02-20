@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Dataset and large files
+dataset/
+dataset.zip
+*.zip
+*.tar
+*.tar.gz
+
+# Models and weights
+*.pt
+*.pth
+weights/
+models/
+runs/
+
+# Results and logs
+results/
+logs/
+*.log
+
+# Fire detection results
+fire_detected/
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# PyCharm
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
