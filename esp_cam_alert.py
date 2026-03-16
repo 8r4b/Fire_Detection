@@ -7,11 +7,14 @@ import os
 from datetime import datetime
 import smtplib
 from email.message import EmailMessage
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # --------------------- Gmail Config ---------------------
-SENDER_EMAIL = "mohamedalsaedi1999@gmail.com"
-SENDER_PASSWORD = "oroj jcuk nkyo lhsp"  # Gmail App Password
-RECIPIENT_EMAIL = "mohamedalsaedi1999@gmail.com"
+SENDER_EMAIL = os.getenv("SENDER_EMAIL")
+SENDER_PASSWORD = os.getenv("SENDER_PASSWORD")
+RECIPIENT_EMAIL = os.getenv("RECIPIENT_EMAIL")
 
 ALERT_COOLDOWN = 10  # seconds
 last_alert_time = 0
@@ -21,7 +24,7 @@ FIRE_FOLDER = "fire_detected"
 os.makedirs(FIRE_FOLDER, exist_ok=True)
 
 # --------------------- YOLO Model ---------------------
-model = YOLO("C:/Users/msi-pc/OneDrive/سطح المكتب/best.pt")
+model = YOLO(os.getenv("MODEL_PATH", "best.pt"))
 
 # --------------------- ESP32 Stream ---------------------
 stream_url = "http://192.168.1.1:81/stream"

@@ -1,13 +1,17 @@
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ===============================
 # CONFIGURATION
 # ===============================
 
-VAPI_API_KEY = "9b6e84c0-2db7-4ffa-9c80-d41378803cae"           # Replace with your VAPI API key
-ASSISTANT_ID = "b525a65c-55d1-4599-9135-0333b2998bf8"          # Replace with your assistant ID
-PHONE_NUMBER_ID = "610e9279-aae0-4962-b8c5-43176b56677a"  # Replace with the Twilio number ID imported into VAPI
-DEST_NUMBER = "+9647736360937"              # Replace with your Iraqi number in E.164 format
+VAPI_API_KEY = os.getenv("VAPI_API_KEY")
+ASSISTANT_ID = os.getenv("ASSISTANT_ID")
+PHONE_NUMBER_ID = os.getenv("PHONE_NUMBER_ID")
+DEST_NUMBER = os.getenv("DEST_NUMBER")
 
 VAPI_CALL_URL = "https://api.vapi.ai/call/phone"
 
